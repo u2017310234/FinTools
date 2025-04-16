@@ -1,0 +1,17 @@
+{
+  "name": "hk-stock-query",
+  "version": "1.0.0",
+  "description": "A tool for querying Hong Kong stock prices.",
+  "main": "src/main.mcp",
+  "scripts": {
+    "start": "node src/main.mcp"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "mcp": "^1.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

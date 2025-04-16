@@ -1,0 +1,21 @@
+{
+  "name": "self-reflection-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for self-reflection and personal insights",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "start": "node build/index.js",
+    "dev": "tsc -w"
+  },
+  "keywords": ["mcp", "self-reflection", "personal-development"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "@types/node": "^20.0.0",
+    "axios": "^1.6.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,26 @@
+class StockQuery {
+    constructor() {
+        this.stockCode = '';
+        this.stockPrice = null;
+    }
+
+    setStockCode(code) {
+        this.stockCode = code;
+    }
+
+    async fetchStockPrice() {
+        if (!this.stockCode) {
+            throw new Error('Stock code is not set.');
+        }
+        const stockService = new StockService();
+        this.stockPrice = await stockService.getStockPrice(this.stockCode);
+    }
+
+    displayStockPrice() {
+        if (this.stockPrice !== null) {
+            console.log(`The current price of ${this.stockCode} is ${this.stockPrice}`);
+        } else {
+            console.log('Stock price is not available. Please fetch the price first.');
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>艾森豪威尔矩阵 | 待办事项管理</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>艾森豪威尔矩阵</h1>
+            <div class="add-task">
+                <input type="text" id="taskInput" placeholder="添加新的待办事项...">
+                <div class="task-priority">
+                    <label>
+                        <input type="checkbox" id="isImportant"> 重要
+                    </label>
+                    <label>
+                        <input type="checkbox" id="isUrgent"> 紧急
+                    </label>
+                </div>
+                <button id="addTask">添加</button>
+            </div>
+        </header>
+        
+        <div class="matrix">
+            <div class="quadrant urgent important" id="q1">
+                <h2>重要 & 紧急</h2>
+                <p class="description">立即处理</p>
+                <div class="task-list" data-quadrant="1"></div>
+            </div>
+            <div class="quadrant important" id="q2">
+                <h2>重要 & 不紧急</h2>
+                <p class="description">规划安排</p>
+                <div class="task-list" data-quadrant="2"></div>
+            </div>
+            <div class="quadrant urgent" id="q3">
+                <h2>不重要 & 紧急</h2>
+                <p class="description">委托他人</p>
+                <div class="task-list" data-quadrant="3"></div>
+            </div>
+            <div class="quadrant" id="q4">
+                <h2>不重要 & 不紧急</h2>
+                <p class="description">考虑取消</p>
+                <div class="task-list" data-quadrant="4"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

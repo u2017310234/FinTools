@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Mass Sender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Mass Sender</h1>
+        <form id="emailForm">
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" required placeholder="Enter email subject">
+            </div>
+            
+            <div class="form-group">
+                <label for="recipients">Recipients (one email per line):</label>
+                <textarea id="recipients" required placeholder="Enter email addresses&#10;example1@example.com&#10;example2@example.com"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="content">Email Content:</label>
+                <textarea id="content" required placeholder="Enter your email content here"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="sendButton">Send Emails</button>
+            </div>
+        </form>
+
+        <div id="status" class="status"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
