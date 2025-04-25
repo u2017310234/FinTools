@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Concepts Simulator - Options</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Interactive Financial Scenarios</h1>
+        <div id="score-display">Score: 0</div> <!-- Added Score Display -->
+    </header>
+
+    <div class="product-nav">
+        <button class="product-tab active" data-product="options">Options</button>
+        <button class="product-tab" data-product="futures">Futures</button>
+        <!-- Add more product tabs here -->
+    </div>
+
+    <div class="main-container">
+        <nav id="scenario-nav">
+            <h2 id="scenario-nav-title">Options Scenarios</h2>
+            <ul id="scenario-list">
+                <!-- Scenarios will be loaded here by JS based on selected product -->
+                <!-- Example for Options (will be dynamically generated) -->
+                <!-- <li><a href="#" data-scenario-id="intro">Introduction to Options</a></li> -->
+                <!-- <li><a href="#" data-scenario-id="buyer-call-profit">Buyer: Call Option Profit</a></li> -->
+                <li><a href="#" data-scenario-id="buyer-call-loss">Buyer: Call Option Loss (Time Decay)</a></li>
+                <li><a href="#" data-scenario-id="seller-put-margin">Seller: Put Option Margin Call</a></li>
+                <li><a href="#" data-scenario-id="exchange-risk">Exchange: Managing Risk</a></li>
+            </ul>
+        </nav>
+
+        <main id="scenario-content">
+            <section id="scenario-display">
+                <h2 id="scenario-title">Select a Scenario</h2>
+                <p id="scenario-description">Choose a scenario from the left menu to begin.</p>
+                <div id="scenario-interactive-area">
+                    <!-- Interactive elements specific to the scenario will be loaded here -->
+                </div>
+                <div id="scenario-explanation">
+                    <!-- Explanations and key takeaways will be loaded here -->
+                </div>
+                 <div id="scenario-chart-container" style="position: relative; height: 300px; margin-top: 20px; display: none;">
+                     <h3>Payoff Diagram (at Expiration)</h3>
+                     <canvas id="payoffChart"></canvas>
+                 </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>Financial Concepts Simulator</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

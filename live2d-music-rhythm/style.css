@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+}
+
+#live2d-container {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    /* The canvas size will be controlled by the Live2D model settings */
+}
+
+#live2d-canvas {
+    display: block; /* Remove extra space below canvas */
+    transition: transform 0.1s ease-out; /* Smooth scaling transition */
+}
+
+#controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#status {
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
+}

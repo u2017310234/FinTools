@@ -1,0 +1,280 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 1rem 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    display: inline-block; /* Align heading and score */
+    margin-right: 20px;
+    font-size: 1.5em; /* Ensure font size is set */
+}
+
+#score-display {
+    display: inline-block;
+    color: #f0f0f0;
+    background-color: #004085; /* Slightly darker blue */
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    vertical-align: middle; /* Align with heading */
+}
+
+.product-nav {
+    background-color: #dee2e6;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #adb5bd;
+}
+
+.product-tab {
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #adb5bd;
+    border-bottom: none; /* Remove bottom border for tabs */
+    background-color: #f8f9fa;
+    color: #0056b3;
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    font-size: 1em;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.product-tab:hover {
+    background-color: #e9ecef;
+}
+
+.product-tab.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+
+.main-container {
+    display: flex;
+    flex: 1; /* Allows container to grow and fill space */
+    margin-top: 10px;
+}
+
+#scenario-nav {
+    width: 250px; /* Fixed width for navigation */
+    background-color: #e9ecef;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto; /* Add scroll if scenarios list is long */
+}
+
+#scenario-nav h2 {
+    margin-top: 0;
+    color: #0056b3;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#scenario-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#scenario-list li {
+    margin-bottom: 8px;
+}
+
+#scenario-list a {
+    text-decoration: none;
+    color: #0056b3;
+    display: block;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#scenario-list a:hover,
+#scenario-list a.active { /* Style for the active scenario link */
+    background-color: #007bff;
+    color: white;
+}
+
+#scenario-content {
+    flex: 1; /* Takes remaining width */
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto; /* Add scroll if content is long */
+}
+
+#scenario-display h2 {
+    margin-top: 0;
+    color: #0056b3;
+}
+
+#scenario-interactive-area {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Styles for dynamically added controls inside interactive area */
+#scenario-interactive-area label {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+}
+
+#scenario-interactive-area input[type="number"],
+#scenario-interactive-area select {
+    width: calc(100% - 16px); /* Adjust for padding */
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#scenario-interactive-area button {
+     display: inline-block;
+     padding: 10px 15px;
+     background-color: #28a745; /* Green for action */
+     color: white;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 14px;
+     margin-top: 10px;
+     margin-right: 10px;
+}
+
+#scenario-interactive-area button:hover {
+    background-color: #218838;
+}
+
+/* Styles for results within interactive area */
+.scenario-result p {
+    margin: 5px 0;
+    padding: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+.scenario-result span {
+    font-weight: bold;
+    float: right; /* Align values to the right */
+}
+
+
+#scenario-explanation {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #ccc;
+}
+
+#scenario-explanation h3 {
+    color: #0056b3;
+}
+
+#scenario-chart-container {
+    /* Styles already added in HTML, can refine here if needed */
+    border-top: 1px dashed #ccc;
+}
+
+footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    text-align: center;
+    padding: 10px 20px;
+    border-top: 1px solid #dee2e6;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+
+/* --- Old styles to potentially remove or repurpose --- */
+/* Keep chart styles if chart is reused */
+#margin-status.warning {
+    color: orange;
+    font-weight: bold;
+}
+
+#margin-status.danger {
+    color: red;
+    font-weight: bold;
+}
+
+/* --- Quiz/Question Styles --- */
+.scenario-quiz {
+    margin-top: 25px;
+    padding: 15px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #e7f3ff; /* Light blue background */
+}
+
+.scenario-quiz h4 {
+    margin-top: 0;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+.quiz-options button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    box-sizing: border-box; /* Ensure padding doesn't break layout */
+}
+
+.quiz-options button:hover:not(:disabled) {
+    background-color: #f0f8ff; /* Lighter blue on hover */
+    border-color: #99caff;
+}
+
+.quiz-options button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.quiz-options button.correct {
+    background-color: #d4edda; /* Light green */
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.quiz-options button.incorrect {
+    background-color: #f8d7da; /* Light red */
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.quiz-feedback {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.quiz-feedback.correct {
+    color: green;
+}
+
+.quiz-feedback.incorrect {
+    color: red;
+}

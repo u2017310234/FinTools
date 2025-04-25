@@ -1,0 +1,3 @@
+opencv-python-headless
+requests
+# Add specific multimodal model SDK if needed (e.g., openai, google-generativeai)

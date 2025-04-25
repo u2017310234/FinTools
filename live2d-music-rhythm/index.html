@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live2D Music Rhythm Sizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Live2D Music Rhythm Sizer</h1>
+
+    <div id="live2d-container">
+        <!-- Canvas for Live2D Model -->
+        <canvas id="live2d-canvas" width="400" height="500"></canvas>
+    </div>
+
+    <div id="controls">
+        <label for="audio-source">Select Audio Source:</label>
+        <select id="audio-source">
+            <option value="mic">Microphone</option>
+            <option value="file">Audio File</option>
+        </select>
+        <input type="file" id="audio-file-input" accept="audio/*" style="display: none;">
+        <button id="start-btn">Start</button>
+        <button id="stop-btn" disabled>Stop</button>
+    </div>
+
+    <p id="status">Status: Idle</p>
+
+    <!-- Include Live2D Cubism Web SDK (Placeholder - User needs to provide the actual SDK path) -->
+    <!-- <script src="path/to/live2d/core/live2dcubismcore.min.js"></script> -->
+    <!-- <script src="path/to/live2d/framework/live2dcubismframework.js"></script> -->
+    <!-- <script src="path/to/live2d/framework/live2dcubismmotionqueuemanager.js"></script> -->
+    <!-- <script src="path/to/live2d/utils/live2dcubismmatrix44.js"></script> -->
+    <!-- <script src="path/to/live2d/utils/live2dcubismmodelmatrix.js"></script> -->
+    <!-- <script src="path/to/live2d/utils/live2dcubismmotion.js"></script> -->
+    <!-- <script src="path/to/live2d/utils/live2dcubismvector2.js"></script> -->
+    <!-- <script src="path/to/live2d/utils/live2dmodelmatrix.js"></script> -->
+    <!-- <script src="path/to/live2d/utils/live2dtargetpoint.js"></script> -->
+    <!-- <script src="path/to/live2d/utils/live2dviewmatrix.js"></script> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
