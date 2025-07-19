@@ -17,4 +17,4 @@ scipy
 # - Scheduling libraries (e.g., APScheduler)
 # - Web framework for UI (e.g., Flask, Django)
 # - Agent frameworks (e.g., langchain)
-pyautogen
+ag2
